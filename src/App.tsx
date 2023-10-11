@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import SideBar from "./pages/SideBar";
+import Pages from "./pages/Pages";
+import { BrowserRouter } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="grid grid-cols-12 gap-6 px-5 lg:px-36 mt-12">
+        <div className="col-span-12 text-center bg-gradient-to-b from-primary via-secondary-sage to-secondary rounded-2xl lg:col-span-3 p-4 relative">
+          <SideBar />
+        </div>
+        <div className="col-span-12 bg-secondary rounded-2xl lg:col-span-9 bg-gradient-to-b from-primary via-secondary-sage to-secondary">
+          <BrowserRouter>
+            <Pages />
+          </BrowserRouter>
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
