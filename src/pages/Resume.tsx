@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Resume = () => {
+interface Props {}
+const Resume: React.FC<Props> = () => {
   return (
     <div>Resume</div>
   )

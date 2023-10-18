@@ -1,13 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import About from './About'
-import Projects from './Projects'
+import Projects from './projects/Projects'
 import Nav from '../components/Nav'
 import Skills from './Skills'
 import Resume from './Resume'
 import NotFound from './NotFound'
 
-const Pages = () => {
+interface Props {}
+const Pages: React.FC<Props> = () => {
   return (
     <>
       <Nav />

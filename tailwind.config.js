@@ -17,6 +17,18 @@ module.exports = {
       fontFamily: {
         satisfy: ["Satisfy", "cursive"],
       },
+
+      height: {
+        section: 'calc(100% - 75px)'
+      },
+
+      dropShadow: {
+        white: "0 2px 3px white"
+      },
+
+      boxShadow: {
+        custom: "0 0 15px 5px rgba(150, 150, 150, 0.5)"
+      }
     },
   },
   plugins: [],

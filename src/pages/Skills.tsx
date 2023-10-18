@@ -11,7 +11,9 @@ import {
   SiCss3,
 } from 'react-icons/si'
 
-const Skills = () => {
+interface Props { }
+
+const Skills: React.FC<Props> = () => {
   return (
     <div className='relative text-5xl lg:text-6xl flex flex-wrap basis-4 py-4 gap-12 justify-around md:gap-y-20 md:gap-x-24 md:py-24 md:px-12'>
       <div className='icons' data-tooltip="HTML5">

@@ -1,6 +1,7 @@
 import React from 'react'
 
-const NotFound = () => {
+interface Props {}
+const NotFound: React.FC<Props> = () => {
   return (
     <div>404 Not Found</div>
   )
