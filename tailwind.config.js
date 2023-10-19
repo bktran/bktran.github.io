@@ -23,7 +23,8 @@ module.exports = {
       },
 
       dropShadow: {
-        white: "0 2px 3px white"
+        white: "0 2px 3px white",
+        calltoaction: "0px 2px 3px black"
       },
 
       boxShadow: {
