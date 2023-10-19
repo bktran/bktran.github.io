@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3babc620.css",
-    "main.js": "/static/js/main.42e4e828.js",
+    "main.css": "/static/css/main.1b79c729.css",
+    "main.js": "/static/js/main.6101c1f7.js",
     "static/js/787.67bef003.chunk.js": "/static/js/787.67bef003.chunk.js",
     "static/media/apartments.png": "/static/media/apartments.65e64492f054519a1214.png",
     "static/media/quizard.png": "/static/media/quizard.546ec543b242ec2bdbfb.png",
@@ -10,12 +10,12 @@
     "static/media/avatar.jpeg": "/static/media/avatar.7b4c0312d71bd5f6d1c5.jpeg",
     "static/media/BaoKhanhTran-resume-v3.pdf": "/static/media/BaoKhanhTran-resume-v3.5d8b20b30b74675e4f8b.pdf",
     "index.html": "/index.html",
-    "main.3babc620.css.map": "/static/css/main.3babc620.css.map",
-    "main.42e4e828.js.map": "/static/js/main.42e4e828.js.map",
+    "main.1b79c729.css.map": "/static/css/main.1b79c729.css.map",
+    "main.6101c1f7.js.map": "/static/js/main.6101c1f7.js.map",
     "787.67bef003.chunk.js.map": "/static/js/787.67bef003.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3babc620.css",
-    "static/js/main.42e4e828.js"
+    "static/css/main.1b79c729.css",
+    "static/js/main.6101c1f7.js"
   ]
 }
