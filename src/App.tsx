@@ -14,16 +14,16 @@ const App: React.FC<Props> = () => {
 
   return (
       <>
-        <div className={`grid grid-cols-12 gap-6 px-5 lg:px-36 py-8 min-h-screen
-          ${themeValue === 'dark' ? 'dark:bg-slate-800' : ''}
+        <div className={`grid grid-cols-12 gap-6 px-5 lg:px-36 min-h-screen py-8 overflow-hidden 
+          ${themeValue === 'dark' ? 'dark:bg-slate-900' : ''}
         `}>
-          <div className={`"h-full shadow-custom col-span-12 text-center  rounded-2xl md:col-span-4 p-4 relative
-            ${themeValue === 'dark' ? 'dark:bg-slate-700' : ''}
+          <div className={`"h-full shadow-custom col-span-12 text-center rounded-2xl md:col-span-4 p-4
+             ${themeValue === 'dark' ? 'dark:bg-slate-800' : ''}
           `}>
             <SideBar />
           </div>
-          <div className={`h-auto md:overflow-y-auto shadow-custom col-span-12 rounded-2xl md:col-span-8 hide-scrollbar pb-6
-            ${themeValue === 'dark' ? 'dark:bg-slate-700' : ''}
+          <div className={`h-full md:overflow-y-auto shadow-custom col-span-12 rounded-2xl md:col-span-8 hide-scrollbar pb-6 overflow-auto 
+            ${themeValue === 'dark' ? 'dark:bg-slate-800' : ''}
           `}>
             <BrowserRouter>
               <Pages />

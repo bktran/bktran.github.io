@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { ThemeContext } from '../../context/ThemeContext'
 import { IProjectsData, ProjectsData } from './projectsData'
@@ -7,11 +7,27 @@ interface Props { }
 
 const Projects: React.FC<Props> = () => {
   const [openModalIndex, setOpenModalIndex] = React.useState<number | null>(null)
-  React.useEffect(() => {
+    
+  useEffect(() => {
     setOpenModalIndex(null)
   }, [])
 
   const { themeValue } = useContext(ThemeContext)
+
+ useEffect(() => {
+    if (openModalIndex !== null) {
+      
+      document.body.style.overflow = 'hidden';
+    } else {
+     
+      document.body.style.overflow = 'auto';
+    }
+
+    
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [openModalIndex]);
 
   return (
     <div className='flex flex-col sm:flex-wrap items-center gap-y-8 md:flex-row md:gap-x-8 md:justify-around md:items-center h-section px-8'>
@@ -27,18 +43,18 @@ const Projects: React.FC<Props> = () => {
               <p className={`flex flex-col pb-2 shadow-sm text-2xl ${themeValue === "dark" ? "dark:text-slate-100" : ""}`}>
                 {projectName}
               </p>
-              <img src={projectImg} alt={`${projectName}`}
+              <img src={projectImg} alt={`${projectName} `}
                 className='h-auto w-5/6 md:w-[400px] md:hover:drop-shadow-none hover:cursor-pointer drop-shadow-calltoaction'
               />
             </div>
             {/*DETAILS --- MODAL for DESKTOP*/}
             <div 
               className={`${index === openModalIndex ? "" : "hidden"}
-              md:fixed md:min-w-full md:min-h-full md:top-0 md:left-0 backdrop-blur-2xl z-40 rounded-2xl
+              md:fixed md:min-w-full md:min-h-full md:top-0 md:left-0 backdrop-blur-2xl z-40 rounded-2xl flex justify-center items-center px-28
             `}>
 
               <div 
-               className={`md:fixed md:top-1/4 md:bottom-1/4 md:left-1/4 md:right-1/4 text-center gap-8 flex flex-col justify-center items-center rounded-3xl bg-secondary min-w-fit min-h-fit p-16
+               className={`text-center gap-8 flex flex-col justify-center items-center rounded-3xl bg-secondary min-w-fit min-h-fit p-16 border-2
                 ${themeValue === 'dark' ? 'dark:bg-slate-800' : ''}
               `}
               >

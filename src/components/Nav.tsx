@@ -7,7 +7,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className='grid grid-flow-col sm:justify-end justify-around sm:gap-12 p-4 sm:mt-4 drop-shadow-[0px_2px_3px_black] relative'>
+      <div className='relative grid grid-flow-col sm:justify-end justify-around sm:gap-12 p-4 sm:mt-4 drop-shadow-[0px_2px_3px_black]'>
         <NavLink to="/" className={({ isActive }) =>
             isActive ? `font-satisfy italic text-3xl drop-shadow-white sm:absolute sm:top-4 sm:left-4 ${themeValue === 'dark' ? 'dark:text-slate-50' : ''}` :
               "text-calltoaction text-extrabold text-lg links"}>
