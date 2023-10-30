@@ -9,10 +9,11 @@
 }
 
 body, html {
-  background: linear-gradient(to bottom, #A9C9A6, #E6FAFC);
+  background: linear-gradient(to bottom, #A9C9A6, #e6fafc64);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  font-family: sans-serif;
 }
 
 .links {

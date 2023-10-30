@@ -1,41 +1,44 @@
-import avatar from "../assets/avatar.jpeg";
-import { GrLinkedin, GrGithub, GrLocation } from 'react-icons/gr'
-import { AiOutlineMail } from 'react-icons/ai'
-import { MdDarkMode ,MdOutlineDarkMode } from 'react-icons/md'
+import { useContext } from "react";
+import { AiOutlineMail } from 'react-icons/ai';
+import { CiLocationOn } from 'react-icons/ci';
+import { GrGithub, GrLinkedin } from 'react-icons/gr';
+import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md';
+import profile from "../assets/Profile.png";
+import { ThemeContext } from "../context/ThemeContext";
 
 interface Props {
-  isDarkMode: boolean
-  toggleDarkMode: () => void
+
  }
-const SideBar: React.FC<Props> = ( {isDarkMode, toggleDarkMode} ) => {
+const SideBar: React.FC<Props> = () => {
+  const {themeValue, setThemeValue} = useContext(ThemeContext)
 
   return (
-    <div className={`md:h-full border-secondary-sage rounded-2xl flex flex-col items-center md:justify-around md:py-36 lg:py-44
-    ${isDarkMode? "dark:bg-slate-800" : "" }`}>
-      <img src={avatar} alt="avatar" className="rounded-full h-auto w-40 my-4 drop-shadow-2xl md:w-48 xl:w-56" />
+    <div className={`md:h-full border-secondary-sage rounded-2xl flex flex-col items-center md:justify-around md:py-36 lg:py-44`}>
+      <img src={profile} alt="avatar" className="rounded-full h-auto w-40 my-4 drop-shadow-2xl md:w-48 xl:w-56" />
       <h3 className="text-3xl font-satisfy text-primary drop-shadow-[0px_2px_3px_black]">
         <span className="text-calltoaction">Bao Khanh </span>
         Tran
       </h3>
-      <p className="font-mono text-primary w-11/12 rounded-xl bg my-1 bg-secondary-sage shadow-md">
+      <p className={`text-xl w-full rounded-xl bg my-1 bg-secondary-sage shadow-md ${themeValue === "dark" ? "dark:text-slate-100" : ""}`}>
         Full Stack Developer
       </p>
-      <div className="bg-secondary-sage w-11/12 my-1 rounded-xl shadow-md">
-        <p className="font-sans font-bold bg-gradient-to-t from-red-500 via-neutral-200 to-blue-900 text-transparent inline-block bg-clip-text drop-shadow-[0px_2px_3px_black]">
+      <p className={`text-xl w-full rounded-xl bg my-1 bg-secondary-sage shadow-md ${themeValue === "dark" ? "dark:text-slate-100" : ""}`}>
           Navy Veteran
-        </p>
-      </div>
+      </p>
+    
       <div className="flex gap-4 text-3xl py-2">
-        <a href="https://www.linkedin.com/in/baokhanhtran/" target="_blank" className="hover:text-linkedin p-1 links hover:opacity-60 text-linkedin" >
+        <a href="https://www.linkedin.com/in/baokhanhtran/" target="_blank" rel="noopener noreferrer" 
+          className="hover:text-linkedin p-1 links hover:opacity-60 text-linkedin" >
           <GrLinkedin />
         </a>
-        <a href="https://github.com/bktran" target="_blank" className="hover:text-github p-1 links hover:opacity-60">
+        <a href="https://github.com/bktran" target="_blank" rel="noopener noreferrer" 
+          className="hover:text-github p-1 links hover:opacity-60">
           <GrGithub />
           </a>
       </div>
-      <div className="md:h-fit w-calc flex flex-col font-serif bg-secondary-sage py-4 shadow-sm">
+      <div className={`md:h-fit w-calc flex flex-col bg-secondary-sage py-4 shadow-sm ${themeValue === "dark" ? "dark:text-slate-100" : ""}`}>
         <span className="flex gap-1 justify-center items-center">
-          <GrLocation />
+          <CiLocationOn/>
           <p>San Diego, CA</p>
         </span>
         <span className="flex gap-1 justify-center items-center" >
@@ -50,10 +53,10 @@ const SideBar: React.FC<Props> = ( {isDarkMode, toggleDarkMode} ) => {
         > 
           Email Me 
         </button>
-        <button onClick={toggleDarkMode}
+        <button type='button' onClick={() => setThemeValue((prevTheme) => prevTheme === 'light' ? 'dark' : 'light')}
           className="bg-calltoaction rounded-full w-fit px-4 drop-shadow-[0px_2px_3px_black] hover:drop-shadow-[0px_2px_2px_gray] active:bg-secondary"
         > 
-          {isDarkMode ? 
+          {themeValue === 'dark' ? 
             <div className="flex items-center">
               <MdOutlineDarkMode />
               Light Mode
