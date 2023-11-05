@@ -8,13 +8,18 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 768px) {
+  html, body {
+    /* overflow: hidden; */
+  }
+}
+
 body, html {
   background: linear-gradient(to bottom, #A9C9A6, #e6fafc64);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   font-family: sans-serif;
-  height: 100vh;
 }
 
 .links {
@@ -47,17 +52,15 @@ body, html {
   .icons:hover {
     &::after{
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
       content: attr(data-tooltip);
-      font-size: 12px;
+      font-size: 1rem;
       background-color: #E6FAFC;
       height: 25px;
       width: fit-content;
       display: flex;
       align-items: center;
-      padding: 1rem;
+      justify-content: center;
+      padding: .5rem;
       border-radius: 10px;
     }
   }

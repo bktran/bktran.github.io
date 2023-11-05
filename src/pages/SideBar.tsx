@@ -13,7 +13,7 @@ const SideBar: React.FC<Props> = () => {
   const {themeValue, setThemeValue} = useContext(ThemeContext)
 
   return (
-    <div className={`md:h-full border-secondary-sage rounded-2xl flex flex-col items-center md:justify-around md:py-36 lg:py-44`}>
+    <div className={`h-full border-secondary-sage rounded-2xl flex flex-col items-center md:justify-around md:py-36 lg:py-44`}>
       <img src={profile} alt="avatar" className="rounded-full h-auto w-40 my-4 drop-shadow-2xl md:w-48 xl:w-56" />
       <h3 className="text-3xl font-satisfy text-primary drop-shadow-[0px_2px_3px_black]">
         <span className="text-calltoaction">Bao Khanh </span>

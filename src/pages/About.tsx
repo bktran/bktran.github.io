@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import avatar from "../assets/avatar.jpeg"
 import { ThemeContext } from "../context/ThemeContext"
 import { NavLink } from "react-router-dom"
