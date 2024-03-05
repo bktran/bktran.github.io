@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.0b41599e.css",
-    "main.js": "/static/js/main.87cdfb1a.js",
-    "static/js/787.67bef003.chunk.js": "/static/js/787.67bef003.chunk.js",
+    "main.css": "/static/css/main.5ab70228.css",
+    "main.js": "/static/js/main.cc979db2.js",
+    "static/js/453.d5db8b13.chunk.js": "/static/js/453.d5db8b13.chunk.js",
     "static/media/apartments.png": "/static/media/apartments.65e64492f054519a1214.png",
     "static/media/quizard.png": "/static/media/quizard.546ec543b242ec2bdbfb.png",
     "static/media/pokemon-tinder.png": "/static/media/pokemon-tinder.f99b3af3ca57d807f149.png",
-    "static/media/Profile.png": "/static/media/Profile.a75de98f4e511725bacc.png",
-    "static/media/resume-pic.png": "/static/media/resume-pic.d97440cf5aaf8d8b13ec.png",
+    "static/media/Profile_2.png": "/static/media/Profile_2.5d337a5614e499d06826.png",
+    "static/media/resume-pic.png": "/static/media/resume-pic.5cfec2aec9d7bec84e53.png",
     "static/media/avatar.jpeg": "/static/media/avatar.7b4c0312d71bd5f6d1c5.jpeg",
     "index.html": "/index.html",
-    "main.0b41599e.css.map": "/static/css/main.0b41599e.css.map",
-    "main.87cdfb1a.js.map": "/static/js/main.87cdfb1a.js.map",
-    "787.67bef003.chunk.js.map": "/static/js/787.67bef003.chunk.js.map"
+    "main.5ab70228.css.map": "/static/css/main.5ab70228.css.map",
+    "main.cc979db2.js.map": "/static/js/main.cc979db2.js.map",
+    "453.d5db8b13.chunk.js.map": "/static/js/453.d5db8b13.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0b41599e.css",
-    "static/js/main.87cdfb1a.js"
+    "static/css/main.5ab70228.css",
+    "static/js/main.cc979db2.js"
   ]
 }
